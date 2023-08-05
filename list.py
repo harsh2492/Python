@@ -32,6 +32,19 @@ class MyCustomList:
   	print("Adding following list",list,"at the end of my current list",self.myList)
   	self.myList = self.myList + list
 
+  def printIntersectionWithList(self,list):
+  	print("Intersection of following list",list,"with my current list",self.myList,"is shown below:")
+  	intersectionOfTwoList  = []
+  	
+  	for x in list:
+  		if x in self.myList:
+  			intersectionOfTwoList.append(x)
+  	
+  	print(intersectionOfTwoList)
+  			
+  		
+
+
 p1 = MyCustomList("List1")
 p1.myListName()
 
@@ -54,3 +67,5 @@ p1.printLenOfList()
 
 p1.appendNewListAtEnd(["Ten","Eleven"])
 p1.displayMyListElement()
+
+p1.printIntersectionWithList(["Ten","NINE"])
